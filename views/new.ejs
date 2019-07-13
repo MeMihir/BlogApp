@@ -1,0 +1,39 @@
+<!-- <h1>This is the new Page</h1>
+
+<form action="/blogs" method="post">
+    <input type="text" name="title" placeholder="name">
+    <input type="text" name="image" placeholder="image">
+    <input type="text" name="content" placeholder="content">
+    <button type="submit">SUBMIT</button>
+</form> -->
+
+<% include partials/header %>
+<form action="/blogs" method="post">
+<div class="ui inverted segment"  id="form-segment">
+    <div class="ui inverted form">
+        <h1>Add New Blog</h1>
+        <div class="ui divider"></div>
+        <div class="stacked segment">
+            <div class="field">
+            <label>Title</label>
+            <input placeholder="Title" name="title" type="text">
+            </div>
+
+            <div class="field">
+            <label>Content</label>
+            <textarea name="content" placeholder="Content" style="margin-top: 0px; margin-bottom: 0px; height: 177px;"></textarea>
+            </div>
+            
+            <div class="field">
+            <label>Image URL</label>
+            <input placeholder="ImgaeURL" name="image" type="text">
+            </div>
+            <button class="ui primary button" type="submit">
+                    Submit
+            </button>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<% include partials/footer %>

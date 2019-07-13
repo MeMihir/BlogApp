@@ -1,0 +1,40 @@
+<% include partials/header %>
+
+<!-- <ul>
+    <% blogs.forEach(function(blog){ %>
+        <li>
+            <img sizes="10px 20px" src=<%= blog.image %>>
+            <p><%= blog.title %></p>
+            <p><%= blog.created.toDateString() %></p>
+            <p><%- blog.content.substring(0,100) %>...</p>
+            <button><a href="/blogs/<%= blog._id %>">MORE</a></button>
+        </li>
+    <% }) %>
+</ul> -->
+<div class="ui inverted segment" id="index-segment">
+<h1>Recent Blogs</h1>
+<div class="ui divider"></div>
+<% blogs.forEach(function(blog){ %>
+    <div class="ui inverted segment" id="index-menu">
+        <div class="ui two column very relaxed grid">
+            <div class="four wide column">
+                    <img src=<%= blog.image %>>
+                    <i><%-blog.created.toDateString() %></i>
+            </div>
+            <div class="twelve wide column">
+                <h3><%= blog.title %></h3>
+                <p><%- blog.content.substring(0,300) %>...</p>
+                <p>
+                    <a href="/blogs/<%= blog._id %>"><button class="ui inverted button">Read More</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="ui divider"></div>
+<% }) %>
+<a href="/blogs/new"><button class="ui inverted button">Add Blog</button></a>
+</div>
+
+<% include partials/footer %>
+
+

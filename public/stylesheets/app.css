@@ -1,0 +1,69 @@
+body
+{
+    background-color: grey;
+}
+
+.menu
+{
+    color: antiquewhite;
+    background-color: black !important;
+
+}
+
+#show-segment
+{
+    margin: 6rem auto 2rem auto;
+}
+
+#show-segment img
+{
+    max-width: 100%;
+    margin: auto 0;
+}
+
+#show-segment p
+{
+    text-align: start;
+}
+
+#show-buttons .field
+{
+    padding: 0;
+    margin: 0 auto;
+}
+
+#index-segment
+{
+    margin: 6rem auto;
+}
+
+#index-menu
+{
+    text-align: left;
+}
+
+#index-menu img
+{
+    width: 100%;
+}
+
+#form-segment
+{
+    margin: 6rem auto;
+}
+
+.container
+{
+    margin: 3rem 10rem;
+    text-align: center;
+}
+
+i
+{
+    size: 2rem;
+}
+
+#form-segment
+{
+    max-width: 50rem;
+}
