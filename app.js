@@ -5,7 +5,13 @@ var mongoose        = require("mongoose");
 var methodOverride  = require('method-override');
 var expressSanitizer= require('express-sanitizer');
 
-mongoose.connect("mongodb://localhost:27017/blog_app",{useNewUrlParser: true});
+mongoose.connect("mongodb+srv://MiMihir:<password>@cluster0-mpr1b.mongodb.net/test?retryWrites=true&w=majority",{
+        useNewUrlParser : true,
+        useCreateIndex  : true 
+    }).then( () => {console.log('connected to DB!');
+    }).catch(err => {
+        console.log(err)
+    });
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressSanitizer());
 app.use(methodOverride("_method"));
