@@ -5,7 +5,7 @@ var mongoose        = require("mongoose");
 var methodOverride  = require('method-override');
 var expressSanitizer= require('express-sanitizer');
 
-mongoose.connect("mongodb+srv://MiMihir:<password>@cluster0-mpr1b.mongodb.net/test?retryWrites=true&w=majority",{
+mongoose.connect("mongodb+srv://MiMihir:ydRvFdVnIW4aaZSn@cluster0-mpr1b.mongodb.net/test?retryWrites=true&w=majority",{
         useNewUrlParser : true,
         useCreateIndex  : true 
     }).then( () => {console.log('connected to DB!');
