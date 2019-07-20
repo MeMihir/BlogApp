@@ -4,8 +4,9 @@ var bodyParser      = require("body-parser");
 var mongoose        = require("mongoose");
 var methodOverride  = require('method-override');
 var expressSanitizer= require('express-sanitizer');
+require('dotenv').config()
 
-mongoose.connect("mongodb+srv://MiMihir:ydRvFdVnIW4aaZSn@cluster0-mpr1b.mongodb.net/test?retryWrites=true&w=majority",{
+mongoose.connect(process.env.DBURL,{
         useNewUrlParser : true,
         useCreateIndex  : true 
     }).then( () => {console.log('connected to DB!');
